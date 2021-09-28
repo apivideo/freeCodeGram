@@ -5,10 +5,18 @@
     @foreach($posts as $post)
         <div class="row">
             <div class="col-6 offset-3">
-                <a href="/profile/{{ $post->user->id }}">
-                    <img src="/storage/{{ $post->image }}" class="w-100">
-                </a>
-            </div>
+                    @if (str_contains($post->image, 'http'))
+                        <a href="/profile/{{ $post->id }}">
+                            <iframe src="{{ $post->image }}" class="w-100" ></iframe>
+                        </a>
+
+                    @else
+                        <a href="/profile/{{$post->id}}">
+                            <img src="/storage/{{$post->image}}" class="w-100">
+                        </a>
+                    @endif
+                </div>
+
         </div>
         <div class="row pt-2 pb-4">
             <div class="col-6 offset-3">

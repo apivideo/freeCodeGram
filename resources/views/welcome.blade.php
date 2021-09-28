@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    freeCodeGram
+                    apiVidstaGram
                 </div>
 
                 <div class="links">
